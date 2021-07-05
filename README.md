@@ -10,7 +10,7 @@
 
 ### 笔记
 
-- [Array](./JavaScript/#Array)
+- [Array](./JavaScript#Array)
 
 - [Object](#)
 
