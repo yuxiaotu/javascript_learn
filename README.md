@@ -1,57 +1,24 @@
-![javascript](https://tutorialmemo.com/wp-content/uploads/2021/01/JavaScript.jpg)
+![javascript](https://www.tutorialrepublic.com/lib/images/javascript-illustration.png)
 
-# JavaScript 学习笔记
+# JavaScript 
 
-## 1，原型链
+<img src="https://img.shields.io/badge/langage-JavaScript-yellow.svg" align="left"/> <img src="https://img.shields.io/badge/worker-xuchenke-green.svg" align="left"/> <img src="https://img.shields.io/badge/version-0.0.1-blue.svg" align="left"/>
 
-:link: [原型对象和原型链](https://zhuanlan.zhihu.com/p/294808520)  [JavaScript prototype](https://medium.com/free-code-camp/a-beginners-guide-to-javascript-s-prototype-9c049fe7b34)
+> JavaScript 是一门跨平台、面向对象的脚本语言，它能使网页可交互（例如拥有复杂的动画，可点击的按钮，通俗的菜单等）。另外还有高级的服务端Javascript版本，例如Node.js，它可以让你在网页上添加更多功能，不仅仅是下载文件（例如在多台电脑之间的协同合作）。在宿主环境（例如 web 浏览器）中， JavaScript 能够通过其所连接的环境提供的编程接口进行控制。
 
-js 分为函数对象和普通对象，每个对象都有 `__proto__` 属性，但是只有函数对象才有 `prototype` 属性。
+<br>
 
-<img src="https://pic2.zhimg.com/80/v2-d63c2286055739a5e9eaf3f053292971_720w.jpg" alt="原型" style="zoom:67%;" />
+### 笔记
 
-**`__proto__ `: ** 是一个对象，有 `constructor` 和 `__proto__` 两个属性。
+- [Array](#)
 
-**`prototype`: ** 原型对象 `prototype` 有一个 constructor 属性，记录了实例是由哪个构造函数创建的。
-
-### 原型链相等关系
-
-```js
-function Person(name, age) {
-    this.name = name;
-    this.age = age;
-}
-let person01 = new Person('小明', 18);
-```
-
-原型和原型链会遵从以下两个准则
-
-```js
-// 原型对象的constructor指向构造函数本身
-Person.prototype.constructor == Person
-// 实例的__proto__和原型对象指向同一个位置
-person01.__proto__ == Person.prototype 
-```
+- [Object](#)
 
 
 
-### 原型链指向
+<br>
 
-<img src="https://pic4.zhimg.com/80/v2-d8ce9f160ae28fd2f068b4bccf3bf013_720w.jpg" alt="原型链的指向" style="zoom: 80%;" />
+### 问题
 
-
-
-![原型链](https://user-gold-cdn.xitu.io/2019/11/6/16e3fec6c1fb209e?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
-
-
-
-## 2，类和继承
-
-
-
-
-
-
-
-
+- 
 
