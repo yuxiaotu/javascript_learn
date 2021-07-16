@@ -15,6 +15,8 @@
 - [Array](./note/Array.md)
 - [Object](./note/Object.md)
 - [var/let/const](./note/let_var_const.me)
+- [解构赋值](./note/Destru_assig.md)
+- [拓展运算符](./note/Spread_syntax.md)
 
 
 
