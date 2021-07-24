@@ -4,11 +4,7 @@
 
 <br>
 
-
-
 ### 1，数组迭代方法
-
-> 🌰 [code](../src/Array_Iteration_Methods.js)
 
 #### forEach()
 

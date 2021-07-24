@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <button id="btn">测试防抖按钮按钮</button>
+</body>
+<script>
+  // 防抖函数
+  function debounce(fn, delay) {
+    let timer = null;
+    return function () {
+      if (timer) {
+        clearTimeout(timer);
+      }
+      timer = setTimeout(fn, delay);
+    }
+  }
+
+  function handle() {
+    console.log(Math.floor(Math.random() * 10));
+  }
+  document.getElementById('btn').addEventListener('click', debounce(handle, 1000));
+</script>
+
+</html>
