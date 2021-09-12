@@ -1,14 +1,10 @@
 # String
 
-> String 全局对象是一个用于字符串或者是一个字符串序列的构造函数。JavaScript会将基本字符串转变为字符串对象，然后才可以使用字符串对象的方法。字符串字面量和直接调用 String 方法的字符串都是基本字符串。
+String 全局对象是一个用于字符串或者是一个字符串序列的构造函数。JavaScript会将基本字符串转变为字符串对象，然后才可以使用字符串对象的方法。字符串字面量和直接调用 String 方法的字符串都是基本字符串。
 
-> 参考资料：
+## 01.搜索方法
 
-<br>
-
-### 1，搜索方法
-
-#### indexOf()
+### indexOf()
 
 返回字符串中指定文本的首次出现的索引
 
@@ -16,9 +12,7 @@
 str.indexOf('a');
 ```
 
-<br>
-
-#### lastindexOf()
+### lastindexOf()
 
 返回字符串中指定文本最后一次出现的索引
 
@@ -26,9 +20,7 @@ str.indexOf('a');
 str.lastindexOf('a');
 ```
 
-<br>
-
-#### search()
+### search()
 
 搜索特定的字符串，返回其索引位置
 
@@ -36,9 +28,7 @@ str.lastindexOf('a');
 str.search('a');
 ```
 
-<br>
-
-#### match()
+### match()
 
 按照正则表达式进行匹配，将匹配的字符串组成一个数组并返回
 
@@ -46,11 +36,9 @@ str.search('a');
 str.metch(/a/g)>
 ```
 
-<br>
+## 02.切片方法
 
-### 2，切片方法
-
-#### slice()
+### slice()
 
 按照索引的开始和结束提取字符串
 
@@ -58,23 +46,17 @@ str.metch(/a/g)>
 str.slice(start, end);
 ```
 
-<br>
-
-#### substring()
+### substring()
 
 类似于 slice() ，但是不接受负值。
 
-<br>
-
-#### substr()
+### substr()
 
 类似于 slice() ，但是第二个参数规定提取的长度
 
-<br>
+## 03.替换字符串
 
-### 3，替换字符串
-
-#### replace()
+### replace()
 
 用另一个值替换在字符串中指定的值，replace() 对大小写敏感
 
@@ -82,25 +64,19 @@ str.slice(start, end);
 str.replace("a", "b") // 将字符串中的“a” 用 "b" 替换
 ```
 
-<br>
+## 04.转换大小写
 
-### 4，转换大小写
-
-#### toUpperCase()
+### toUpperCase()
 
 把字符串转换为大写
 
-<br>
-
-#### toLowerCase()
+### toLowerCase()
 
 把字符串转换为小写 
 
-<br>
+## 05.连接字符串
 
-### 5，连接字符串
-
-#### concat()
+### concat()
 
 连接两个字符串，但是不会修改原始字符串，而是返回一个新的字符串。
 
@@ -108,9 +84,7 @@ str.replace("a", "b") // 将字符串中的“a” 用 "b" 替换
 "hello".concat("", "world");
 ```
 
-<br>
-
-#### trim()
+### trim()
 
 删除字符串两端的空白符
 
@@ -118,23 +92,17 @@ str.replace("a", "b") // 将字符串中的“a” 用 "b" 替换
 str.trim()
 ```
 
-<br>
+## 06.提取字符
 
-### 6，提取字符
-
-#### charAt()
+### charAt()
 
 返回字符串中指定下标（位置）的字符串
 
-<br>
-
-#### charCodeAt()
+### charCodeAt()
 
 返回字符串中指定索引的字符 unicode 编码
 
-<br>
-
-#### split()
+### split()
 
 将字符串按照指定的分隔符进行分隔，返回一个数组
 

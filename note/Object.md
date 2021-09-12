@@ -1,12 +1,10 @@
-# Object
+# Object 对象
 
-> js 中的对象（object）是一组键值（key-value）的集合，key 总是 string 类型，而 value 可以是任何类型，object 很像是一个 hash map，object 里的 key-value 是无序的。
+> **参考**：[深入理解 JS 的对象](https://rainzhaojy.github.io/2015/js_object.html)
 
-> 参考资料：[深入理解 JS 的对象](https://rainzhaojy.github.io/2015/js_object.html)
+js 中的对象（object）是一组键值（key-value）的集合，key 总是 string 类型，而 value 可以是任何类型，object 很像是一个 hash map，object 里的 key-value 是无序的。
 
-<br>
-
-### 1, 读取属性
+## 01.读取属性
 
 要访问对象中的属性可以用 `.` 和 `[]` 的方法。如果属性名用变量来表示就用 `[]` ，否则就用 `.`
 
@@ -16,9 +14,7 @@ me.firstname
 me['lastname']
 ```
 
-
-
-### 2，判断属性是否存在
+## 02.判断属性是否存在
 
 可以通过 `key in object` 的方法，还有就是 hasOwnProperty(key) 的方法。 
 
@@ -34,9 +30,8 @@ if (me.hasOwnProperty) {}
 
 - 方法3: hasOwnProperty判断最严格，只有 me 本身拥有属性 firstname 才会返回true
 
-  
 
-### 3，删除属性
+## 03.删除属性
 
 使用 delete 可以删除属性
 
@@ -44,11 +39,9 @@ if (me.hasOwnProperty) {}
 delete me.lastname;
 ```
 
+## 04.枚举属性
 
-
-### 4, 枚举属性
-
-**for-in loop**
+### for-in loop
 
 ```js
 for (var property in me) {
@@ -57,7 +50,7 @@ for (var property in me) {
 }
 ```
 
-**Object.keys**
+### Object.keys
 
 ```js
 var properties = Object.keys(me);

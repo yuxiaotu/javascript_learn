@@ -1,10 +1,10 @@
 # 原型和原型链
 
-> Js  的对象包含了一个 prototype 的内部属性，这个对象所对应的就是该对象的原型。
+> **参考**：[原型和原型链](https://www.cnblogs.com/powertoolsteam/p/14009110.html)
 
-> 参考资料：[原型和原型链](https://www.cnblogs.com/powertoolsteam/p/14009110.html)
+Js  的对象包含了一个 prototype 的内部属性，这个对象所对应的就是该对象的原型。
 
-### 构造函数和原型
+## 01.构造函数和原型
 
 JavaScript 中没有类的概念，但 JavaScript  中仍然可以使用对象概念，为了保证对象之间的联系，JavaScript 引入了原型和原型链的概念。 
 
@@ -29,7 +29,7 @@ Dog.prototype.bark = () => {
 }
 ```
 
- ### 继承和原型链
+## 02.继承和原型链
 
 JavaScript 中所有的对象都是它的原型对象继承而来，而原型对象自己也是一个对象，它也有自己的原型对象，这样一层一层上朔就形成了一个类似链表的结构，这就「原型链」。
 
