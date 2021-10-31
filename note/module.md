@@ -1,5 +1,7 @@
 # 模块化
 
+> **参考：**[JavaScript 模块化指北](https://juejin.cn/post/6844903654277791757#heading-8)
+
 JavaScript 的模块化编程是迫切的需求，在理想状态下只需要实现核心的业务逻辑，其他都可以使用被人已经写好的模块。
 
 ## 01.演变过程
@@ -30,7 +32,7 @@ JavaScript 的模块化演变经历了无模块化，到 CommomJS ，再到 AND�
 - 不能对只读属性赋值
 - 禁止 this 指向全局对象
 
-**export**
+### export
 
 接口名和模块内部变量之间必须建立一一对应的关系，在 function 和  class 的输出，也必须遵守这样的写法。
 
@@ -58,9 +60,7 @@ export {
     c as stream3};
 ```
 
-<br>
-
-**import**
+### import
 
 ```js
 // 第一种
@@ -73,9 +73,7 @@ import {stream as firstValue} from ',/profile'
 import * as circle from './module'
 ```
 
-<br>
-
-**export default**
+### export default
 
 export default 是一种默认导入的方法
 
