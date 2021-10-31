@@ -2,7 +2,7 @@
 
 > **参考**：[原型和原型链](https://www.cnblogs.com/powertoolsteam/p/14009110.html)
 
-Js  的对象包含了一个 prototype 的内部属性，这个对象所对应的就是该对象的原型。
+Js  的对象包含了一个叫 prototype 的内部属性，这个对象所对应的就是该对象的原型。
 
 ## 01.构造函数和原型
 
