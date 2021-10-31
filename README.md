@@ -25,8 +25,16 @@
 ## 代码段
 
 - [返回一个随机布尔值](./src/random_boolean.js)
-- [翻转字符串](./reverse.js)
-- [逆转数字](./)
+- [翻转字符串](./src/reverse.js)
+- [逆转数字](./str/reverse_num.js)
 
-- [数组中的最大值和最小值](./min_max.js)
+- [数组中的最大值和最小值](./src/min_max.js)
+
+- [重复一个字符串](./src/repeat_str.js)
+
+- [简化 switch 方法](./src/simplify_switch.js)
+
+- [if 多条件比较](./str/multiple_condition.js)
+- [简化数字比较](./str/num_compare.js)
+- [二维数组转化为一维](./src/multiple_to_one.js)
 
