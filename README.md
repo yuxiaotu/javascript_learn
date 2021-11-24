@@ -9,17 +9,20 @@
 - [Object](./note/Object.md)
 - [Set](./note/Set.md)
 - [Map](./note/Map.md)
-- [var/let/const](./note/let_var_const.md)
+- [var | let | const](./note/let_var_const.md)
 - [String](./note/String.md)
 - [解构赋值](./note/Destru_assig.md)
 - [拓展运算符](./note/Spread_syntax.md)
 - [Function](./note/function.md)
 - [Promise](./note/Promise.md)
-- [Async/Await](./note/Async_Await.md)
+- [Async | Await](./note/Async_Await.md)
 - [Class](./note/class.md)
 - [Module](./note/module.md)
-- [原型/原型链](./note/prototype.md)
+- [原型 | 原型链](./note/prototype.md)
 - [事件循环](./note/eventloop.md)
+- [闭包](./note/闭包.md)
+- [防抖和节流](./note/防抖和节流.md)
+- [深拷贝和浅拷贝](./note/深拷贝和浅拷贝.md)
 
 ## 代码
 - [返回一个随机布尔值](./src/random_boolean.js)
@@ -31,4 +34,5 @@
 - [if 多条件比较](./str/multiple_condition.js)
 - [简化数字比较](./str/num_compare.js)
 - [二维数组转化为一维](./src/multiple_to_one.js)
+
 
