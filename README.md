@@ -34,5 +34,14 @@
 - [if 多条件比较](./str/multiple_condition.js)
 - [简化数字比较](./str/num_compare.js)
 - [二维数组转化为一维](./src/multiple_to_one.js)
+- [实现 toggle class](./src/toggle_class.js)
 
+## what's output
+- [sayHi | 变量提升](./src/_sayHi.js)
+- [for循环和setTimeout](./src/_setTimeout_1.js)
+- [shape | 钩子函数this指向](./src/_shape.js)
+- [+ture | 一元操作符](./_one_operator.js)
+- [访问引用数据类型](./src/_object.js)
+- [引用数据类型修改值](./src/_object_modify.js)
+- [Number(3)比值](./src/_number.js)
 
