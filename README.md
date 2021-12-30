@@ -44,4 +44,10 @@
 - [访问引用数据类型](./src/_object.js)
 - [引用数据类型修改值](./src/_object_modify.js)
 - [Number(3)比值](./src/_number.js)
-
+- [chameleon | 静态方法](./src/_chameleon.js)
+- [greeting](./src/_greeting.js)
+- [Person | 给实例添加特性](./src/_person.js)
+- [Person | new 关键字](./src/_person_1.js)
+- [sum](./src/_sum.js)
+- [getPersonInfo | 标记模板字面量](./src/_getPersonInfo.js)
+- [checkAge](./src/checkAge.js)
