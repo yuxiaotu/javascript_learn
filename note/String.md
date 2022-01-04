@@ -1,62 +1,53 @@
 # String
 
+## 01. 作用
 String 全局对象是一个用于字符串或者是一个字符串序列的构造函数。JavaScript会将基本字符串转变为字符串对象，然后才可以使用字符串对象的方法。字符串字面量和直接调用 String 方法的字符串都是基本字符串。
 
-## 01.搜索方法
-
-### indexOf()
-
+## 02. 搜索方法
+### 02.1。 indexOf()
 返回字符串中指定文本的首次出现的索引
 
 ```
 str.indexOf('a');
 ```
 
-### lastindexOf()
-
+### 02.2. lastindexOf()
 返回字符串中指定文本最后一次出现的索引
 
 ```
 str.lastindexOf('a');
 ```
 
-### search()
-
+### 02.3. search()
 搜索特定的字符串，返回其索引位置
 
 ```js
 str.search('a');
 ```
 
-### match()
-
+### 02.4. match()
 按照正则表达式进行匹配，将匹配的字符串组成一个数组并返回
 
 ```
 str.metch(/a/g)>
 ```
 
-## 02.切片方法
-
-### slice()
-
+## 03. 切片方法
+### 03.1. slice()
 按照索引的开始和结束提取字符串
 
 ```js
 str.slice(start, end);
 ```
 
-### substring()
-
+### 03.2. substring()
 类似于 slice() ，但是不接受负值。
 
-### substr()
-
+### 03.3. substr()
 类似于 slice() ，但是第二个参数规定提取的长度
 
-## 03.替换字符串
-
-### replace()
+## 04. 替换字符串
+### 04.1. replace()
 
 用另一个值替换在字符串中指定的值，replace() 对大小写敏感
 
@@ -64,46 +55,38 @@ str.slice(start, end);
 str.replace("a", "b") // 将字符串中的“a” 用 "b" 替换
 ```
 
-## 04.转换大小写
+## 05. 转换大小写
 
-### toUpperCase()
-
+### 05.1. toUpperCase()
 把字符串转换为大写
 
-### toLowerCase()
-
+### 05.2. toLowerCase()
 把字符串转换为小写 
 
-## 05.连接字符串
-
-### concat()
-
+## 06.连接字符串
+### 06.1. concat()
 连接两个字符串，但是不会修改原始字符串，而是返回一个新的字符串。
 
 ```js
 "hello".concat("", "world");
 ```
 
-### trim()
-
+### 06.2. trim()
 删除字符串两端的空白符
 
 ```js
 str.trim()
 ```
 
-## 06.提取字符
+## 07. 提取字符
 
-### charAt()
-
+### 07.1. charAt()
 返回字符串中指定下标（位置）的字符串
 
-### charCodeAt()
-
+### 07.2. charCodeAt()
 返回字符串中指定索引的字符 unicode 编码
 
-### split()
-
+### 07.3. split()
 将字符串按照指定的分隔符进行分隔，返回一个数组
 
 
