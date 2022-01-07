@@ -1,9 +1,9 @@
 # Object 对象
 
 ## 01. 含义
-js 中的对象（object）是一组键值（key-value）的集合，key 总是 string 类型，而 value 可以是任何类型，object 很像是一个 hash map，object 里的 key-value 是无序的。
+JavaScript 中的对象（object）是一组键值对（key-value）的集合，key 总是 string 类型，而 value 可以是任何类型，object 很像是一个 hash map，object 里的 key-value 是无序的。
 
-## 02.读取属性
+## 02. 读取属性
 要访问对象中的属性可以用 `.` 和 `[]` 的方法。如果属性名用变量来表示就用 `[]` ，否则就用 `.`
 
 ```javascript
@@ -12,8 +12,8 @@ me.firstname
 me['lastname']
 ```
 
-## 03.判断属性是否存在
-可以通过 `key in object` 的方法，还有就是 hasOwnProperty(key) 的方法。 
+## 03. 判断属性是否存在
+可以通过 `key in object` 的方法，还有就是 `hasOwnProperty(key)` 的方法。 
 
 ```javascript
 if (me.firstname) {}
@@ -21,15 +21,15 @@ if (firstname in me) {}
 if (me.hasOwnProperty) {}
 ```
 
-- **方法一:** 如果 me 有属性 name，但 name 的值为null, undefined, 0, false, NaN, ''时，会返回false
+- 如果 `me` 有属性 `name`。但 `name` 的值为 `null`、 `undefined`、`0`、`false`, `NaN`, `''` 时，使用 if 判断会返回 false
 
-- **方法二:** 如果 firstname 是 me 原型对象里的属性，in也会返回true
+- 如果 `firstname` 是 `me` 原型对象里的属性，使用 in 来判断也会返回true
 
-- **方法三:** hasOwnProperty判断最严格，只有 me 本身拥有属性 firstname 才会返回true
+- `hasOwnProperty` 判断最严格，只有 `me` 本身拥有属性 `firstname` 才会返回 true
 
 
-## 04.删除属性
-使用 `delete` 可以删除属性
+## 04. 删除属性
+使用 `delete` 关键字可以删除属性。
 
 ```js
 delete me.lastname;
@@ -39,7 +39,7 @@ delete me.lastname;
 ### 05.1 for-in loop
 
 ```js
-for (var property in me) {
+for (let property in me) {
     console.log('key' + property);
     console.log('value' + me[property]);
 }
