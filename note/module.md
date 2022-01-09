@@ -25,7 +25,7 @@ JavaScript 的模块化演变经历了无模块化，到 CommomJS ，再到 AND�
 - 不能对只读属性赋值
 - 禁止 this 指向全局对象
 
-### export
+### 02.1. export
 接口名和模块内部变量之间必须建立一一对应的关系，在 function 和  class 的输出，也必须遵守这样的写法。
 
 export 语句输出的接口，与其对应的值是动态绑定的关系，即通过该接口可以取得模块内部实时的值。
@@ -52,7 +52,7 @@ export {
     c as stream3};
 ```
 
-### import
+### 02.2. import
 
 ```js
 // 第一种
@@ -65,7 +65,7 @@ import {stream as firstValue} from ',/profile'
 import * as circle from './module'
 ```
 
-### export default
+### 02.3. export default
 
 export default 是一种默认导入的方法
 
