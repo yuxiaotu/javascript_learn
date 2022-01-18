@@ -90,3 +90,7 @@
 - [Set()](./src/_set.js)
 - [修改原数组的值](./src/_arrat.js)
 - [setInterval()](./src/_setinterval.js)
+- [x => y => z](./src/_x_y_z.js)
+- [isNaN](./src/_isNan.js)
+- [Promise](./src/_promise_4.js)
+- [Proxy](./src/_proxy.js)
