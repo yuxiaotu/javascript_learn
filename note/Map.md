@@ -13,11 +13,9 @@ const fruits = new Map([
 
 ## 02. 修改方法
 ### 02.1. set()
-在 Map 对象中添加键值对，或者是修改指定键的值。
+使用 `set()` 方法可以在 Map 对象中添加键值对，或者是修改指定键的值。
 
 ```js
-const fruits = new Map();
-
 fruits.set("apples", 500);
 fruits.set("bananas", 300);
 fruits.set("oranges", 200);
@@ -27,14 +25,14 @@ fruits.set("apples", 200);
 ```
 
 ### 02.2. delete()
-按照键名删除对应的键值对。
+`delete` 方法可以按照键名删除对应的键值对。
 
 ```js
 fruits.delete("apples");
 ```
 
 ### 02.3. clear()
-清空 Map 对象。
+`clear()` 方法可以清空 Map 对象。
 
 ```js
 fruits.clear();
@@ -42,7 +40,7 @@ fruits.clear();
 
 ## 03. 迭代方法
 ### 03.1. forEach()
-通过 `forEach()` 方法进行迭代。将返回一个 [key, value] 的值。
+通过 `forEach()` 方法进行迭代。将返回一个 `[key, value]` 的值。
 
 ```js
 fruits.forEach(function(value, key) => {
@@ -51,7 +49,7 @@ fruits.forEach(function(value, key) => {
 ```
 
 ### 03.2. entries()
-`entries()` 方法同样可以返回一个 [key, value] 的值。
+`entries()` 方法同样可以返回一个 `[key, value]` 的值。
 
 ```js
 for (const x of fruits.entries()) {

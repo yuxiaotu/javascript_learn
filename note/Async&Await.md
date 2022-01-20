@@ -17,7 +17,7 @@ loadData();
 ```
 
 ## 03. 重写 promise 代码
-使用 async / await 改写 promise 方法实现的代码。
+使用 `async/await` 改写 `promise` 方法实现的代码。
 
 ```js
 fetch('coffee.jpg')

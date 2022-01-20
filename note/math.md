@@ -32,3 +32,10 @@ Math.floor(-4.2) // -5
 Math.trunc(4.9) // 4
 Math.trunc(-4.2) // -4
 ```
+
+## 03. 随机数
+`random()` 生成 `0 ~ 1` 之间的随机数。
+
+```js
+Math.floor(random() * 10 + 1);
+```
