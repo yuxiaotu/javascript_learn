@@ -1,6 +1,8 @@
-function Person(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
 }
 
 const lydia = new Person('Lydia', 'Hallie');

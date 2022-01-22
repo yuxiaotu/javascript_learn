@@ -3,7 +3,7 @@ for (var i = 0; i < 3; i++) {
 }
 
 for (let i = 0; i < 3; i++) {
-  setTimeout(() => console.log(1), 1);
+  setTimeout(() => console.log(i), 1);
 }
 
 /**
