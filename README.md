@@ -33,15 +33,13 @@
 - [DOM和BOM](./note/DOM和BOM.md)
 - [事件对象](./note/事件对象.md)
 - [事件委托](./note/事件委托.md)
-- [在网页中实现回退]()
-- [在数据很对时如何渲染]()
 
 
 
 ## 代码
 - [返回一个随机布尔值](./src/random_boolean.js)
 - [翻转字符串](./src/reverse.js)
-- [逆转数字](./str/reverse_num.js)
+- [逆转数字](./src/reverse_num.js)
 - [数组中的最大值和最小值](./src/min_max.js)
 - [重复一个字符串](./src/repeat_str.js)
 - [简化 switch 方法](./src/simplify_switch.js)
@@ -49,7 +47,7 @@
 - [简化数字比较](./str/num_compare.js)
 - [二维数组转化为一维](./src/multiple_to_one.js)
 - [实现 toggle class](./src/toggle_class.js)
-
+- [将 XML 转换为 JSON](./src/xml2json.js)
 
 
 ## what's output

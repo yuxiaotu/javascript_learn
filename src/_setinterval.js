@@ -7,7 +7,7 @@ let config = {
 config = null
 
 /**
- * setInterval 的回调仍然会被每秒钟调用
+ * setInterval() 的回调仍然会被每秒钟调用
  */
 
 /**
