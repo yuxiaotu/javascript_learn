@@ -1,4 +1,4 @@
-# JavaScript学习笔记
+# JavaScript 学习笔记
 
 ## 基础
 - [var | let | const](./note/let&var&const.md)
@@ -6,34 +6,33 @@
 - [Array | 数组](./note/Array.md)
 - [Set | 集合](./note/Set.md)
 - [Map | 字典](./note/Map.md)
-- [Map 和 Object 的区别](./note/Map和Object的区别.md)
 - [String | 字符串](./note/String.md)
-- [ES6 | 数组的拓展](./note/ES6对数组的拓展.md)
-- [ES6 | 对象的拓展](./note/ES6对对象的拓展.md)
+- [Symbol | 表示一个唯一的值](./note/Symbol.md)
+- [BigInt | 表示任意大的整数](./note/BigInt.md)
+- [Function | 函数](./note/Function.md)
+- [Math对象 | 数学常数属性和数学函数](./note/Math.md)
+- [call() | apply() | bind()](./note/Call&Bind.md)
 - [解构赋值](./note/结构赋值.md)
 - [拓展运算符](./note/拓展运算符.md)
 - [简单类型和对应的包装类](./note/简单类型和对应的包装类.md)
-- [Symbol | 表示一个唯一的值](./note/Symbol.md)
-- [BigInt | 表示任意大的整数](./note/BigInt.md)
+- [Proxy | 创建对象的代理](./note/Proxy.md)
+- [yield | 暂停和恢复一个生成器函数](./note/yield.md)
 - [null 和 undefined 的区别](./note/null&undefined区别.md)
 - [map() 和 forEach() 的区别](./note/map&forEach的区别.md)
-- [Function | 函数](./note/Function.md)
-- [作用域和作用域链](./note/作用域和作用域链.md)
-- [闭包的含义和作用](./note/闭包.md)
-- [call() | apply() | bind()](./note/Call&Bind.md)
-- [Math 对象](./note/Math.md)
 - [Promise | 异步编程解决方案](./note/Promise.md)
 - [Async | Await 关键字](./note/Async&Await.md)
 - [Class | JS 的类和对象](./note/Class.md)
 - [Module | 模块化](./note/Module.md)
+- [作用域和作用域链](./note/作用域和作用域链.md)
+- [闭包的含义和作用](./note/闭包.md)
 - [原型 | 原型链，的概念和作用](./note/prototype.md)
 - [事件循环](./note/Eventloop.md)
 - [防抖 | 节流](./note/防抖和节流.md)
 - [深拷贝 | 浅拷贝](./note/深拷贝和浅拷贝.md)
 - [JSON 数据格式和方法](./note/JSON.md)
-- [Proxy](./note/Proxy.md)
-- [yield](./note/yield.md)
-
+- [ES6 | 数组的拓展](./note/ES6对数组的拓展.md)
+- [ES6 | 对象的拓展](./note/ES6对对象的拓展.md)
+- [Map 和 Object 的区别](./note/Map和Object的区别.md)
 
 
 ## 代码
