@@ -30,8 +30,8 @@ apple.say.call(banana); // yellow
 apple.say.apply(banana); // yellow
 ```
 
-## 02. call 和 bind 的区别
-`call` 和 `bind` 的作用是一样的，只是接受参数的方式不一样。
+## 02. call 和 apply 的区别
+`call` 和 `apply` 的作用是一样的，只是接受参数的方式不一样。
 
 `call()` 需要把参数按照顺序传递进去，而 `apply()` 则是把参数放到数组里面。
 
