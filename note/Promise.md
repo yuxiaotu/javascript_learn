@@ -12,7 +12,7 @@ doSomething(function(result){
         }, failureCallBack);
     }, failureCallBack);
 }, failureCallback);
-```
+``` 
 
 通过 `Promise` 改写上面的代码。`Promise` 解决异步操作具有以下优点。
 
