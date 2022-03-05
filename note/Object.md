@@ -1,5 +1,7 @@
 # Object 对象
 
+- [t](#05.-遍历)
+
 ## 01. 作用
 JavaScript 中的「对象（object）」是一组「键值对（key-value）」的集合，`key` 总是 `string` 类型，而 `value` 可以是任何类型，`object` 很像是一个 `hash map`，`object` 里的 `key-value` 是无序的。
 
