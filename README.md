@@ -1,7 +1,7 @@
 # JavaScript 学习笔记
 
 ## 基础
-- [var | let | const](./note/let&var&const.md)
+- [var | let | const](./note/let-var-const.md)
 - [Object | 对象](./note/Object.md)
 - [Array | 数组](./note/Array.md)
 - [Set | 集合](./note/Set.md)
