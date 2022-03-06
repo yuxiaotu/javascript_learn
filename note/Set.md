@@ -1,73 +1,123 @@
-# Set
+# Set 集合
 
-## 01. 作用
+- [Set对象的作用和创建方法](#01-Set-对象的作用和创建方法)
+- [Set内容的修改方法](#02-Set-内容的修改方法)
+- [判断是否存在某个值](#04-判断是否存在某个值)
+
+
+## 01 Set 对象的作用和创建方法
 `Set` 对象是值的集合，可以存储任何类型的唯一值，按照插入的顺序迭代它的元素。`Set` 中的元素只会出现一次，即 `Set` 中的值是唯一的。
 
 创建集合：
 ```js
-const letters = new Set(["a", "b", "c"]);
+const fruits = new Set(["Apple", "Banana", "Chreey"]);
 ```
 
-## 02. 修改方法
+## 02 Set 内容的修改方法
+- add()
+- clear()
+- delete()
+
 ### 02.1. add()
-`add()` 方法可以在集合的尾部添加一个元素。
+可以在集合的尾部添加一个元素。
+
+- 返回值：对象本身。
 
 ```js
-letters.add("d");
-letters.add("e");
-letters.add("f");
+fruits.add("Durian");
+
+for (let i of fruits) {
+  console.log(i);
+}
+```
+```
+输出结果：
+Apple
+Banana
+Cherry
+Durian
 ```
 
 ### 02.2. clear()
-`clear()` 方法可以移除 `Set` 对象中的所有元素。
+可以移除 `Set` 对象中的所有元素。
 
 ```js
-letters.clear();
+fruits.clear();
 ```
 
-### 02.3. delete(value)
-`delete()` 方法用于删除某个指定的值。
+### 02.3. delete()
+用于删除某个指定的值。
 
 ```js
-letters.delete("a");
+fruits.delete("Apple");
+for (let i of fruits) {
+  console.log(i);
+}
+```
+```
+输出结果：
+Banana
+Chreey
 ```
 
-## 03.迭代方法
+
+## 03 Set 的迭代方法
+- entries()
+- values()
+- forEach()
+
 ### 03.1. entries()
 返回一个迭代器对象，这个对象中包含按序插入的所有元素的值的 `[value, value]` 的数组。每个值的键和值相等。
 
 ```js
-for (let x of letters.entries()) {
-  console.log(x) // ["a", "a"]
+for (let i of fruits.entries()) {
+  console.log(i);
 }
 ```
-
-### 03.2. keys()
-按照插入顺序，返回所有元素的值。
-
-```js
-letters.keys(); // {"a", "b", "c"}
+```
+输出结果：
+["Apple", "Apple"]
+["Banana", "Banana"]
+["Chreey", "Chreey"]
 ```
 
 ### 03.3. values()
-同样会按照插入顺序，返回插入的值。
+同样会按照插入顺序，返回一个包含 `Set` 对象值的 `Iterator` 对象。
 
 ```js
-letters.values(); //{"a", "b", "c"}
+let iterator = fruits.values();
+console.log(iterator.next().value);
+console.log(iterator.next().value);
+```
+```
+输出结果：
+Apple
+Banana
 ```
 
 ### 03.4. forEach()
-
 ```js
-letters.forEach(value => {
+fruits.forEach(value => {
   console.log(value);
 })
 ```
+```
+输出结果：
+Apple
+Banana
+Chreey
+```
 
-## 04.访问方法
+## 04 判断是否存在某个值
+- has()
+
 ### 04.1. has()
-判断该值在 Set 对象中是否存在，返回 boolean 值。
+判断该值在 `Set` 对象中是否存在，返回 `boolean` 值。
 
 ```js
-letters.has("a"); // true
+fruits.has("Apple"); 
+```
+```
+输出结果：
+true
 ```

@@ -1,85 +1,197 @@
-# Object 对象
+# Object 对象结构
 
-- [t](#遍历)
-
-## 01. 作用
-JavaScript 中的「对象（object）」是一组「键值对（key-value）」的集合，`key` 总是 `string` 类型，而 `value` 可以是任何类型，`object` 很像是一个 `hash map`，`object` 里的 `key-value` 是无序的。
-
-JavaScript 提供多个内建对象，比如 `String`、`Date`、`Array` 等等。 对象只是带有属性和方法的特殊数据类型。
-
-使用对象字面量的方式创建：
-
-```js
-person = {
-  firstname:"John",
-  lastname:"Doe",
-  age:50,
-  eyecolor:"blue"
-};
-```
+- [Object 的作用和创建方式](#01-Object-的作用和创建方式)
+- [访问 Object 属性](#02-访问-Object-属性)
+- [判断属性是否存在](#03-判断属性是否存在)
+- [删除 Object 中的属性](#04-删除-Object-中的属性)
+- [遍历 Object 中的属性](#05-遍历-Object-中的属性)
+- [Object 其他内置方法](#06-其他内置方法)
 
 
-## 02. 读取属性
-要访问对象中的属性可以用 `.` 和 `[]` 两种方法。如果属性名用变量来表示就用 `[]` ，否则就用 `.`。
+## 01 Object 的作用和创建方式
+`Js` 中的对象是一组 `key-value` 的集合，`key` 总是 `string` 类型，而 `value` 可以是任何类型，`Object` 很像是一个 `Hash Map`，`Object` 里的 `key-value` 是无序的。
+
+`Js` 提供了多个内建对象，比如 `String`、`Date`、`Array` 等等。 
+
+通常使用对象字面量的方式创建：
 
 ```js
-person.firstname;
-person['lastname'];
-```
-
-
-## 03. 判断属性是否存在
-可以通过 `key in object` 方式，或者是是 `hasOwnProperty(key)` 的方法来判断属性是否在对象中。 
-
-```js
-if (person.firstname) {
-    return person.firstname;
-}
-```
-```js
-if (firstname in person) {
-    return person.firstname;
-}
-```
-```js
-if (person.hasOwnProperty) {
-    return person.firstname;
+let fruit = {
+    name: 'Apple',
+    price: 8.8,
+    productionPlace: 'Yantai Shandong'
 }
 ```
 
-- 如果 `person` 有属性 `firstname`。但如果 `firstname` 的值为 `null`、 `undefined`、`0`、`false`, `NaN`, `''` 时，使用 `if` 判断会返回 `false`。
 
-- 如果 `firstname` 是 `person` 原型对象里的属性，使用 `in` 来判断也会返回 `true`。
+## 02 访问 Object 属性
+对 `Object` 的访问通过属性名来完成：
+- 符号 ` . ` 连接属性名。
+- 符号 `[]`，连接指代属性名的变量。
 
-- `hasOwnProperty` 判断最严格，只有 `person` 本身拥有属性 `firstname` 才会返回 `true`。
+```js
+let name = fruit.name;
+let price = fruit['price'];
+console.log(name);
+console.log(price);
+```
+```
+输出结果：
+Apple
+8.8
+```
 
 
-## 04. 删除属性
+## 03 判断属性是否存在
+通过判断对应的属性名是否存在于对象中来判断属性是否存在。
+- key in Object 方法。
+- Object.hasOwnProperty() 方法。
+
+```js
+let key = 'name';
+console.log(key in fruit);
+console.log(fruit.hasOwnproperty(key));
+```
+```
+输出结果：
+true
+true
+```
+
+两种方法的不同：
+- 如果 `name` 是 `fruit` 原型对象里的属性，使用 `in` 来判断也会返回 `true`。
+
+- `Object.hasOwnProperty()` 判断最严格，只有 `fruit` 本身拥有属性 `name` 才会返回 `true`。
+
+
+## 04 删除 Object 中的属性
 使用 `delete` 关键字可以删除属性。
 
 ```js
-delete person.lastname;
+delete fruit.productionPlace;
+console.log(fruit);
+```
+```
+输出结果：
+{ name: 'Apple', price: 8.8  }
 ```
 
 
-## 遍历
-### 05.1. for-in 方法
+## 05 遍历 Object 中的属性
+要遍历 `Object` 首先得到对象的所有属性名，然后通过属性名来访问。
+- for - in 方法，遍历对象的属性名。
+- Object.keys() 方法，返回对象的所有属性名。
 
 ```js
-for (let ley in person) {
-    console.log('key' + key);
-    console.log('value' + person[key]);
+for (let key in fruit) {
+  console.log(key + " : " + fruit[key]);
+}
+```
+```js
+for (let key of Object.keys(fruit)) {
+  console.log(key + " : " + fruit[key])
+}
+```
+```
+输出结果：
+name : Apple
+price : 8.8
+proctionPlace : Yantai Shandong
+```
+
+
+## 06 其他内置方法
+- Object.assign()
+- Object.defineProperty()
+- Object.entries()
+- Object.values()
+- Object.freeze()
+
+### 06.1. Object.assign()
+将所有可枚举属性的值从一个或多个源对象分配到目标对象。
+- 参数：目标对象，源对象。
+- 返回值：目标对象。
+
+```js
+const productionInfo = { 
+  manufacturenData: '20220305'
+}
+const returnTarget = Object.assign(fruit, productionInfo);
+console.log(returnTarget);
+```
+```
+输出结果：
+{ 
+  name: "Apple", 
+  price: 8.8, 
+  productionPlace: "Yantai Shandong", 
+  manufactureData: "20220305" 
 }
 ```
 
-### 05.2 Object.keys 方法
-`Object.keys()` 方法，可以返回对象中所有属性名。然后通过遍历属性名来实现对象遍历。
+### 06.2. Object.defineProperty()
+直接在一个对象上定义一个新属性，或者修改一个对象的现有属性。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
+- 参数：要定义属性的对象，新定义的属性名称，属性描述。
+- 返回值：定义属性后的新对象。
 
 ```js
-var properties = Object.keys(peron);
-for (let i = 0; i < properties.length; i++) {
-    console.log('Name:' + person[i]);
-    console.log('Value' + person[properties[i]]);
-}
+Object.defineProperty(fruit, 'comment', {
+  configurable: true,
+  enumerable: true,
+  value: 'amazing',
+  writable: true,
+});
+
+console.log(fruit.comment);
+```
+```
+输出结果：
+amazing
+```
+对象里目前存在的属性描述符有两种主要形式：「数据描述符」和「存取描述符」。两者共享了下面这些属性：
+- configurable
+- enumerable
+
+「数据描述符」还具有下面这些属性：
+- value
+- writable
+
+「存取描述符」还具有下面这些属性：
+- get
+- set
+
+```js
+Object.defineProperty(fruit, 'comment', {
+  set: function(value) {
+    console.log('赋值操作：' + value);
+  },
+  get: function() {
+    return "amazing";
+  }
+})
+
+fruit.comment = 'good';
+console.log(fruit.comment);
+```
+```
+输出结果：
+amazing
+good
 ```
 
+### 06.3. Object.freeze()
+冻结一个对象，冻结后不能再添加新的属性，也不能再删除、修改属性。
+
+```js
+Object.freeze(fruit);
+fruit.comment = 'amazing';
+console.log(fruit)
+```
+```
+输出结果：
+{ 
+  name: "Apple", 
+  price: 8.8, 
+  productionPlace: "Yantai Shandong"
+}
+```

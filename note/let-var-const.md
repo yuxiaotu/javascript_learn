@@ -1,8 +1,8 @@
 # var, let, const 关键字
 
 - [var, let, const 关键字的作用](#01-var-let-const-的作用)
-- [var 关键字的特点](#02-var-关键字的特定)
-- [let 和 const 关键字的特定](#03-let-和-const-关键字的特定)
+- [var 关键字的特点](#02-var-关键字的特点)
+- [let 和 const 关键字的特定](#03-let-和-const-关键字的特点)
 
 
 ## 01 var let const 的作用

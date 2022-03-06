@@ -1,51 +1,69 @@
-# Map
+# Map 键值对
 
-## 01. 作用
-保存键值对，能够记住键的原始插入顺序，任何值都可以作为一个键或者是一个对象。
+- [Map 对象的作用和创建方法](#01-Map-对象的作用和创建方法)
+- [修改 Map 对象内容的方法](#02-修改-Map-对象内容的方法)
+- [Map 对象的迭代方法](#03-Map-对象的迭代方法)
+- [Map 对象内容的访问方法](#04-Map-对象内容的访问方法)
+- [判断是否存在某个键值对](#05-判断是否存在某个键值对)
 
+
+## 01 Map 对象的作用和创建方法
+`Map` 对象保存键值对，能够记住键的原始插入顺序，任何值都可以作为一个键或者是一个对象。
+
+创建 `Map` 对象：
 ```js
 const fruits = new Map([
-  ["apples", 500],
-  ["bananas", 300],
-  ["oranges", 200]
+  ["Apple", 500],
+  ["Banana", 300],
+  ["Chreey", 200]
 ])
 ```
 
-## 02. 修改方法
+
+## 02 修改 Map 对象内容的方法
+- set()
+- delete()
+- clear()
+
 ### 02.1. set()
-使用 `set()` 方法可以在 Map 对象中添加键值对，或者是修改指定键的值。
+使用 `set()` 方法可以在 `Map` 对象中添加键值对，或者是修改指定键的值。
 
 ```js
-fruits.set("apples", 500);
-fruits.set("bananas", 300);
-fruits.set("oranges", 200);
-```
-```js
-fruits.set("apples", 200);
+fruits.set("Apple", 600);
+fruits.set("Durian", 200);
 ```
 
 ### 02.2. delete()
-`delete` 方法可以按照键名删除对应的键值对。
+`delete()` 方法可以按照键名删除对应的键值对。
 
 ```js
-fruits.delete("apples");
+fruits.delete("Apple");
 ```
 
 ### 02.3. clear()
-`clear()` 方法可以清空 Map 对象。
+`clear()` 方法可以清空 `Map` 对象的内容。
 
 ```js
 fruits.clear();
 ```
 
-## 03. 迭代方法
+## 03 Map 对象的迭代方法
+- forEach()
+- entries()
+
 ### 03.1. forEach()
-通过 `forEach()` 方法进行迭代。将返回一个 `[key, value]` 的值。
+通过 `forEach()` 方法进行迭代，对每个键值对执行依次回调函数。
 
 ```js
 fruits.forEach(function(value, key) => {
-  console.log(key + "," + value);
+  console.log(key, value);
 })
+```
+```
+输出结果：
+"Apple" 500
+"Banana" 300
+"Chreey" 200
 ```
 
 ### 03.2. entries()
@@ -56,19 +74,36 @@ for (const x of fruits.entries()) {
   console.log(x[0], x[1]);
 }
 ```
+```
+输出结果：
+"Apple" 500
+"Banana" 300
+"Chreey" 200
+```
 
-## 04. 访问方法
+## 04 Map 对象内容的访问方法
+- get()
+
 ### 04.1. get()
 按照键名获取对应的值。
 
 ```js
-fruits.get("apples"); // 500
+console.log(fruits.get("Apple")); 
+```
+```
+输出结果：
+500
 ```
 
-### 04.2. has()
+## 05 判断是否存在某个键值对
 按照键名判断是否存在相应的键值对。
 
-```js
-fruits.has("apples"); // true
-```
+- has()
 
+```js
+cosole.log(fruits.has("Apple")); 
+```
+```
+输出结果：
+true
+```
