@@ -5,6 +5,7 @@
 - [判断属性是否存在](#03-判断属性是否存在)
 - [删除 Object 中的属性](#04-删除-Object-中的属性)
 - [遍历 Object 中的属性](#05-遍历-Object-中的属性)
+- [Object 其他内置方法](#06-其他内置方法)
 
 
 ## 01 Object 的作用和创建方式
@@ -96,4 +97,101 @@ for (let key of Object.keys(fruit)) {
 name : Apple
 price : 8.8
 proctionPlace : Yantai Shandong
+```
+
+
+## 06 其他内置方法
+- Object.assign()
+- Object.defineProperty()
+- Object.entries()
+- Object.values()
+- Object.freeze()
+
+### 06.1. Object.assign()
+将所有可枚举属性的值从一个或多个源对象分配到目标对象。
+- 参数：目标对象，源对象。
+- 返回值：目标对象。
+
+```js
+const productionInfo = { 
+  manufacturenData: '20220305'
+}
+const returnTarget = Object.assign(fruit, productionInfo);
+console.log(returnTarget);
+```
+```
+输出结果：
+{ 
+  name: "Apple", 
+  price: 8.8, 
+  productionPlace: "Yantai Shandong", 
+  manufactureData: "20220305" 
+}
+```
+
+### 06.2. Object.defineProperty()
+直接在一个对象上定义一个新属性，或者修改一个对象的现有属性。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
+- 参数：要定义属性的对象，新定义的属性名称，属性描述。
+- 返回值：定义属性后的新对象。
+
+```js
+Object.defineProperty(fruit, 'comment', {
+  configurable: true,
+  enumerable: true,
+  value: 'amazing',
+  writable: true,
+});
+
+console.log(fruit.comment);
+```
+```
+输出结果：
+amazing
+```
+对象里目前存在的属性描述符有两种主要形式：「数据描述符」和「存取描述符」。两者共享了下面这些属性：
+- configurable
+- enumerable
+
+「数据描述符」还具有下面这些属性：
+- value
+- writable
+
+「存取描述符」还具有下面这些属性：
+- get
+- set
+
+```js
+Object.defineProperty(fruit, 'comment', {
+  set: function(value) {
+    console.log('赋值操作：' + value);
+  },
+  get: function() {
+    return "amazing";
+  }
+})
+
+fruit.comment = 'good';
+console.log(fruit.comment);
+```
+```
+输出结果：
+amazing
+good
+```
+
+### 06.3. Object.freeze()
+冻结一个对象，冻结后不能再添加新的属性，也不能再删除、修改属性。
+
+```js
+Object.freeze(fruit);
+fruit.comment = 'amazing';
+console.log(fruit)
+```
+```
+输出结果：
+{ 
+  name: "Apple", 
+  price: 8.8, 
+  productionPlace: "Yantai Shandong"
+}
 ```
