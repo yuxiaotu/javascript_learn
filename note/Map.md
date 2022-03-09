@@ -2,17 +2,17 @@
 
 - [Map 对象的作用和创建方法](#1-Map-对象的作用和创建方法)
 - [修改 Map 对象内容的方法](#2-修改-Map-对象内容的方法)
-  - [set()](#21-set())
-  - [delete()](#22-delete())
-  - [clear()](#23-clear())
+  - [set()](#21-set)
+  - [delete()](#22-delete)
+  - [clear()](#23-clear)
 - [Map 对象的迭代方法](#3-Map-对象的迭代方法)
-  - [forEach](#31-forEach())
-  - [entries()](#32-entries())
+  - [forEach](#31-forEach)
+  - [entries()](#32-entries)
 - [Map 对象内容的访问方法](#4-Map-对象内容的访问方法)
-  - [keys()](#41-keys())
-  - [get()](#42-get())
+  - [keys()](#41-keys)
+  - [get()](#42-get)
 - [判断是否存在某个键值对](#5-判断是否存在某个键值对)
-  - [has()](#51-has())
+  - [has()](#51-has)
 
 
 # 1. Map 对象的作用和创建方法

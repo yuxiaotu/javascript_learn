@@ -2,15 +2,15 @@
 
 - [Set对象的作用和创建方法](#1-Set-对象的作用和创建方法)
 - [Set内容的修改方法](#2-Set-内容的修改方法)
-  - [add()](#21-add())
-  - [clear()](#22-clear())
-  - [delete()](#23-delete())
+  - [add()](#21-add)
+  - [clear()](#22-clear)
+  - [delete()](#23-delete)
 - [判断是否存在某个值](#3-判断是否存在某个值)
-  - [entries()](#31-entries())
-  - [values()](#32-values())
-  - [forEach()](#33-forEach())
+  - [entries()](#31-entries)
+  - [values()](#32-values)
+  - [forEach()](#33-forEach)
 - [判断是否存在某个值](#4-判断是否存在某个值)
-  - [has()](#41-has())
+  - [has()](#41-has)
 
 
 # 1. Set 对象的作用和创建方法
