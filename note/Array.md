@@ -2,7 +2,7 @@
 
 - [Array 的作用和创建方法](#1-Array-的作用和创建方法)
 - [Array 迭代方法](#2-Array-的迭代方法)
-  - [forEach()](#21-forEach())
+  - [forEach()](#21-forEach)
   - [map()](#22-map())
   - [filter()](#23-filter())
   - [every()](#24-every())
