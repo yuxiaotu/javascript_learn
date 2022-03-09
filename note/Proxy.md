@@ -1,15 +1,15 @@
 # Proxy
 
-- [Proxy 的作用](#01-作用)
-- [使用方法](#02-使用)
-- [handler 拦截方法](#03-handler-拦截方法)
+- [Proxy 的作用](#1-作用)
+- [使用方法](#2-使用)
+- [handler 拦截方法](#3-handler-拦截方法)
 
 
-## 01. 作用
+# 1. 作用
 `Proxy` 的作用是在目标对象之前架设一层「拦截」，对该对象的访问都必须通过这一层「拦截」，可以外界的访问进行过滤和改写。
 
 
-## 02. 使用
+# 2. 使用
 `Proxy` 为构造函数，用来生成 `Proxy` 对象。
 ```js
 let p = new Proxy(target, handler);
@@ -19,7 +19,7 @@ let p = new Proxy(target, handler);
 - `handler` 是一个对象，其声明了代理 `target` 的一些操作，其属性是当执行一个操作时定义代理的行为的函数。 
 
 
-## 03. handler 拦截方法
+# 3. handler 拦截方法
 - get(target, propKey, receiver)
 - set(target, propKey, receiver)
 - has(target, propKey)

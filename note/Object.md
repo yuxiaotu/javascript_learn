@@ -1,19 +1,23 @@
 # Object 对象结构
 
-- [Object 的作用和创建方式](#01-Object-的作用和创建方式)
-- [访问 Object 属性](#02-访问-Object-属性)
-- [判断属性是否存在](#03-判断属性是否存在)
-- [删除 Object 中的属性](#04-删除-Object-中的属性)
-- [遍历 Object 中的属性](#05-遍历-Object-中的属性)
-- [Object 其他内置方法](#06-其他内置方法)
+- [Object 的作用和创建方式](#1-Object-的作用和创建方式)
+- [访问 Object 属性](#2-访问-Object-属性)
+- [判断属性是否存在](#3-判断属性是否存在)
+- [删除 Object 中的属性](#4-删除-Object-中的属性)
+- [遍历 Object 中的属性](#5-遍历-Object-中的属性)
+- [Object 静态方法](#6-其他内置方法)
+  - [assign()](#61-Object.assign())
+  - [defineProperty()](#62-Object.defineProperty())
+  - [freeze()](#63-Object.freeze())
+  - [getPropertyOf()](#64-Object.getPropertyOf())
+- [实例属性](#7-实例属性)
+- [实例方法](#8-实例方法)
 
 
-## 01 Object 的作用和创建方式
-`Js` 中的对象是一组 `key-value` 的集合，`key` 总是 `string` 类型，而 `value` 可以是任何类型，`Object` 很像是一个 `Hash Map`，`Object` 里的 `key-value` 是无序的。
+# 1. Object 的作用和创建方式
+`Js` 中的对象用于存储 `key-value` 的集合和复杂的实体，`key` 总是 `string` 类型，而 `value` 可以是任何类型，`Object` 里的 `key-value` 是无序的。
 
-`Js` 提供了多个内建对象，比如 `String`、`Date`、`Array` 等等。 
-
-通常使用对象字面量的方式创建：
+通过 `Object()` 构造函数，或者是 [对象字面量](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer) 的方式创建:
 
 ```js
 let fruit = {
@@ -22,9 +26,18 @@ let fruit = {
     productionPlace: 'Yantai Shandong'
 }
 ```
+```js
+let fruit = new Object({
+  name: 'Apple',
+  price: 8.8,
+  productionPlace: 'Yantai Shandong'
+})
+```
+
+在 `Js` 中，几乎所有的对象都是 `Object` 类型的实例，它们都会从 `Object.property` 继承属性和方法。
 
 
-## 02 访问 Object 属性
+# 2. 访问 Object 内容
 对 `Object` 的访问通过属性名来完成：
 - 符号 ` . ` 连接属性名。
 - 符号 `[]`，连接指代属性名的变量。
@@ -42,7 +55,7 @@ Apple
 ```
 
 
-## 03 判断属性是否存在
+# 3. 判断属性是否存在
 通过判断对应的属性名是否存在于对象中来判断属性是否存在。
 - key in Object 方法。
 - Object.hasOwnProperty() 方法。
@@ -64,7 +77,7 @@ true
 - `Object.hasOwnProperty()` 判断最严格，只有 `fruit` 本身拥有属性 `name` 才会返回 `true`。
 
 
-## 04 删除 Object 中的属性
+# 4. 删除 Object 中的属性
 使用 `delete` 关键字可以删除属性。
 
 ```js
@@ -77,7 +90,7 @@ console.log(fruit);
 ```
 
 
-## 05 遍历 Object 中的属性
+# 5. 遍历 Object 中的属性
 要遍历 `Object` 首先得到对象的所有属性名，然后通过属性名来访问。
 - for - in 方法，遍历对象的属性名。
 - Object.keys() 方法，返回对象的所有属性名。
@@ -100,14 +113,23 @@ proctionPlace : Yantai Shandong
 ```
 
 
-## 06 其他内置方法
+# 6. 静态方法
 - Object.assign()
 - Object.defineProperty()
+- Object.defineProperties()
 - Object.entries()
 - Object.values()
 - Object.freeze()
+- Object.create()
+- Object.getOwnPropertyDescriptor()
+- Object.getOwnPropertyNames()
+- Object.getPropertyOf()
+- Object.is()
+- Object.isExtensible()
+- Object.isFrozen()
 
-### 06.1. Object.assign()
+
+## 6.1. Object.assign()
 将所有可枚举属性的值从一个或多个源对象分配到目标对象。
 - 参数：目标对象，源对象。
 - 返回值：目标对象。
@@ -129,7 +151,7 @@ console.log(returnTarget);
 }
 ```
 
-### 06.2. Object.defineProperty()
+## 6.2. Object.defineProperty()
 直接在一个对象上定义一个新属性，或者修改一个对象的现有属性。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
 - 参数：要定义属性的对象，新定义的属性名称，属性描述。
 - 返回值：定义属性后的新对象。
@@ -179,7 +201,7 @@ amazing
 good
 ```
 
-### 06.3. Object.freeze()
+## 6.3. Object.freeze()
 冻结一个对象，冻结后不能再添加新的属性，也不能再删除、修改属性。
 
 ```js
@@ -195,3 +217,32 @@ console.log(fruit)
   productionPlace: "Yantai Shandong"
 }
 ```
+
+## 6.4. Object.getPropertyOf() 
+返回指定对象的原型。
+
+```js
+const array = [];
+const type = Object.getPropertyOf(array);
+
+console.log(Object.getPropertyOf(array));
+console.log(Object.getPropertyOf(type));
+```
+```
+输出结果：
+Array
+Object
+```
+
+
+# 7. 实例属性
+- Object.property.constructor
+- `Object.property.__proto__`
+
+
+# 8. 实例方法
+- Object.property.hasOwnProperty()
+- Object.property.isPropertyOf()
+- Object.property.toString()
+- Object.property.localeString()
+- Object.property.valueOf()

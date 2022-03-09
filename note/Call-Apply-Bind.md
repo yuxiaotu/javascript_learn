@@ -1,12 +1,12 @@
 # call(), bind(), apply()
 
-- [call(), bind(), apply()的作用](#01-作用)
-- [call() 和 apply() 的区别](#02-call-和-apply-的区别)
-- [bind() 的特点](#03-bind-的特点)
-- [使用案例](#04-使用案例)
+- [call(), bind(), apply()的作用](#1-作用)
+- [call() 和 apply() 的区别](#2-call-和-apply-的区别)
+- [bind() 的特点](#3-bind-的特点)
+- [使用案例](#4-使用案例)
 
 
-## 01 作用
+# 1. 作用
 `call`、`apply`、`bind` 都是为了改变某个函数运行时的上下文（context），也就是为了改变函数体内部 `this` 的指向。
 
 `Js` 的一大特点是，函数存在「定义时上下文」和「运行时上下文」以及「上下文是可以改变的」这样的概念。
@@ -42,7 +42,7 @@ yellow
 ```
 
 
-## 02 call 和 apply 的区别
+# 2. call 和 apply 的区别
 `call()` 和 `bind()` 的作用是一样的，只是接受参数的方式不一样。
 
 `apply()` 是把参数放到数组里面。
@@ -68,7 +68,7 @@ console.log(max);
 ```
 
 
-## 03 bind 的特点
+# 3. bind 的特点
 `bind()` 方法会创建一个新的函数，在 `bind()` 被调用时，`bind()` 方法的第一个参数作为 `this` ，而其他参数作为这个新的函数的参数。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
 
 
@@ -115,7 +115,7 @@ console.log(foo.getX.bind(obj)());
 ```
 
 
-## 03 使用案例
+# 3. 使用案例
 实现数组之间追加。
 
 ```js

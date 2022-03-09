@@ -1,6 +1,13 @@
 ### Promise 
 
-## 01. 含义
+- [Promise 的作用](#1-作用)
+- [Promise 的状态](#2-状态)
+- [Promise 的使用](#3-使用)
+- [Promise 实例方法](#4-实例方法)
+- [Promise 静态方法](#5-静态方法)
+
+
+# 1. 作用
 `Promise` 是异步编程的一种解决方案，异步操作不会立即返回操作的结果，像网络请求、文件下载、操作数据库都是异步的，当操作完成时会通知要调用其结果的函数来做后序处理。
 
 以往要处理多层异步操作，往往像下面这样，形成回调地狱。
@@ -32,7 +39,8 @@ doSomething().then(function(result) {
 .catch(failureCallback);
 ```
 
-## 02. 状态
+
+# 2. 状态
 `Promise` 对象有三种状态：
 - pending（进行中）
 - fulfilled（已完成）
@@ -42,7 +50,8 @@ doSomething().then(function(result) {
 
 一旦状态改变（从 `pending` 变为 `fulfilled` ；或者是从 `pending` 变为 `rejected`），就不会再变，任何时候都可以得到这个结果。
 
-## 0.3 使用
+
+# 3. 使用
 `Promise` 对象是一个构造函数，用来生成 `Promise` 实例。
 
 `Promise` 构造函数接受一个函数作为参数，该函数的两个参数分别是 `resolve` 和 `reject`。
@@ -56,8 +65,7 @@ const promise = new Promise(function(resolve, reject) {})
 ```
 
 
-
-## 04. 实例方法
+# 4. 实例方法
 `Promise` 构建出来的实例存在以下方法：
 
 - #### then()
@@ -103,8 +111,7 @@ getUserId().then(function(id) {
 ```
 
 
-
-## 03. 静态方法
+# 5. 静态方法
 `Promise` 构造函数存在以下方法。
 - all()
 - race()
@@ -113,7 +120,7 @@ getUserId().then(function(id) {
 - reject()
 - try()
 
-### 03.1. all()
+## 5.1. all()
 当全部成功时，按序返回成功的值，若有一个失败，则返回第一个失败的值。
 
 接收一个数组作为参数，数组成员都是 `Promise` 实例。
@@ -126,7 +133,7 @@ getUserId().then(function(id) {
 const p = Promise.all([p1, p2, p3]);
 ```
 
-### 03.2. race()
+## 3.2. race()
 只要有一个成功就成功，返回成功的值。
 
 只要 `p1`、`p2`、`p3` 之中有一个实例率先改变状态，`p` 的状态就跟着改变。率先改变的 `Promise` 实例的返回值则传递给p的回调函数。
