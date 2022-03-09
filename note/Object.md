@@ -6,10 +6,10 @@
 - [删除 Object 中的属性](#4-删除-Object-中的属性)
 - [遍历 Object 中的属性](#5-遍历-Object-中的属性)
 - [Object 静态方法](#6-其他内置方法)
-  - [assign()](#61-Object.assign)
-  - [defineProperty()](#62-Object.defineProperty)
-  - [freeze()](#63-Object.freeze)
-  - [getPropertyOf()](#64-Object.getPropertyOf)
+  - [assign()](#61-assign)
+  - [defineProperty()](#62-defineProperty)
+  - [freeze()](#63-freeze)
+  - [getPropertyOf()](#64-getPropertyOf)
 - [实例属性](#7-实例属性)
 - [实例方法](#8-实例方法)
 
@@ -129,7 +129,7 @@ proctionPlace : Yantai Shandong
 - Object.isFrozen()
 
 
-## 6.1. Object.assign()
+## 6.1. assign()
 将所有可枚举属性的值从一个或多个源对象分配到目标对象。
 - 参数：目标对象，源对象。
 - 返回值：目标对象。
@@ -151,7 +151,7 @@ console.log(returnTarget);
 }
 ```
 
-## 6.2. Object.defineProperty()
+## 6.2. defineProperty()
 直接在一个对象上定义一个新属性，或者修改一个对象的现有属性。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
 - 参数：要定义属性的对象，新定义的属性名称，属性描述。
 - 返回值：定义属性后的新对象。
@@ -201,7 +201,7 @@ amazing
 good
 ```
 
-## 6.3. Object.freeze()
+## 6.3. freeze()
 冻结一个对象，冻结后不能再添加新的属性，也不能再删除、修改属性。
 
 ```js
@@ -218,7 +218,7 @@ console.log(fruit)
 }
 ```
 
-## 6.4. Object.getPropertyOf() 
+## 6.4. getPropertyOf() 
 返回指定对象的原型。
 
 ```js
