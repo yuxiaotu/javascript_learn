@@ -30,6 +30,7 @@
 - [Map 和 Object 的区别](./note/Map和Object的区别.md)
 - [null 和 undefined 的区别](./note/null&undefined区别.md)
 - [map() 和 forEach() 的区别](./note/map&forEach的区别.md)
+- [this 的指向](./note/this的指向.md)
 
 
 ## 代码
