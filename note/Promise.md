@@ -8,7 +8,9 @@
 
 
 # 1. 作用
-`Promise` 是异步编程的一种解决方案，异步操作不会立即返回操作的结果，像网络请求、文件下载、操作数据库都是异步的，当操作完成时会通知要调用其结果的函数来做后序处理。
+`Promise` 是「异步编程」的一种解决方案，异步操作不会立即返回操作的结果，像网络请求、文件下载、操作数据库都是异步的，当操作完成时会通知要调用其结果的函数来做后序处理。
+
+`Promise` 可以看作是一个容器，里面保存者未来才会结束的事件，通常是一个异步操作的结果。有了 `Promise` 就可以将异步操作以同步操作的流程表示出来，避免了层层嵌套的回调函数。
 
 以往要处理多层异步操作，往往像下面这样，形成回调地狱。
 ```js
@@ -19,7 +21,7 @@ doSomething(function(result){
         }, failureCallBack);
     }, failureCallBack);
 }, failureCallback);
-``` 
+```
 
 通过 `Promise` 改写上面的代码。`Promise` 解决异步操作具有以下优点。
 
@@ -61,11 +63,66 @@ doSomething().then(function(result) {
 
 
 ```js
-const promise = new Promise(function(resolve, reject) {})
+const promise = new Promise(function(resolve, reject) {
+  if (/* 异步操作成功 */) {
+    resolve(value);
+  } else {
+    reject(error);
+  }
+})
+```
+
+`Promise` 实例生成后，可以使用 `then()` 方法分别指定 `resolved` 状态和 `rejected` 状态的回调函数。第一个回调函数是 `Promise` 对象的状态变为 `resolved` 时调用，第二个回调函数是 `Promise` 对象的状态变为 `rejected` 时调用。两个函数都是可选的。 
+
+```js
+promise.then(function() {
+  // success
+}, function(error) {
+  // failure
+})
+```
+
+ 有如下例子：
+
+`timeout()` 方法返回一个 `Promise` 实例，表示一段时间后才会发生的结果，过了指定的时间后，`Promise` 实例的状态变为 `resolved` ，就会触发 `then()` 方法绑定的回调函数。
+
+```js
+function timeout(ms) {
+  return new Promise((resolve, reject) => {
+    setTimeout(resolve, ms, 'done');
+  });
+}
+
+timeout(100).then(value => {
+  console.log(value);
+})
+```
+
+异步加载图片的例子：
+
+使用 `Promise` 包装一个图片加载的异步操作，加载成功就调用 `resolve` ，否则就调用 `reject`。
+
+```js
+function loadImageAsync(url) {
+  return new Promise(function(resolve, reject) {
+    const img = new Image();
+    img.onload = function() {
+      resolve(image);
+    }
+    
+    img.onerror = function() {
+      reject(new Error('could not load image at' + url));
+    }
+    
+    img.src = url;
+  })
+}
 ```
 
 
+
 # 4. 实例方法
+
 `Promise` 构建出来的实例存在以下方法：
 
 - #### then()
@@ -152,5 +209,10 @@ p.then(console.log)
 
 
 
-## 参考
+****
+
+**参考：**
+
 - https://github.com/febobo/web-interview/issues/40
+
+- https://es6.ruanyifeng.com/#docs/promise
