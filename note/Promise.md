@@ -211,8 +211,6 @@ p.then(console.log)
 
 ****
 
-**参考：**
-
 - https://github.com/febobo/web-interview/issues/40
 
 - https://es6.ruanyifeng.com/#docs/promise

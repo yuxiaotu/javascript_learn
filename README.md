@@ -1,4 +1,4 @@
-# JavaScript 学习笔记
+#  JavaScript 学习笔记
 
 ## 基础
 - [var | let | const](./note/let-var-const.md)
@@ -8,14 +8,20 @@
 - [Map | 键值对](./note/Map.md)
 - [String | 字符串](./note/String.md)
 - [Symbol | 表示一个唯一的值](./note/Symbol.md)
+- [简单类型和对应的包装类](./note/简单类型和对应的包装类.md)
 - [Function | 函数](./note/Function.md)
 - [Math | 数学常数属性和数学函数](./note/Math.md)
-- [call() | apply() | bind()](./note/Call-Apply-Bind.md)
+- [JSON 数据格式和方法](./note/JSON.md)
+- [Map 和 Object 的区别](./note/Map和Object的区别.md)
+- [null 和 undefined 的区别](./note/null&undefined区别.md)
+
+## 进阶
+
 - [解构赋值](./note/结构赋值.md)
 - [拓展运算符](./note/拓展运算符.md)
-- [简单类型和对应的包装类](./note/简单类型和对应的包装类.md)
+- [this 的指向](./note/this的指向.md)
+- [call() | apply() | bind()](./note/Call-Apply-Bind.md)
 - [Proxy | 创建对象的代理](./note/Proxy.md)
-- [yield | 暂停和恢复一个生成器函数](./note/yield.md)
 - [Promise | 异步编程解决方案](./note/Promise.md)
 - [Async | Await 关键字](./note/Async&Await.md)
 - [Class | JS 的类和对象](./note/Class.md)
@@ -26,14 +32,9 @@
 - [事件循环](./note/Eventloop.md)
 - [防抖 | 节流](./note/防抖和节流.md)
 - [深拷贝 | 浅拷贝](./note/深拷贝和浅拷贝.md)
-- [JSON 数据格式和方法](./note/JSON.md)
-- [Map 和 Object 的区别](./note/Map和Object的区别.md)
-- [null 和 undefined 的区别](./note/null&undefined区别.md)
-- [map() 和 forEach() 的区别](./note/map&forEach的区别.md)
-- [this 的指向](./note/this的指向.md)
-
 
 ## 代码
+
 - [返回一个随机布尔值](./src/random_boolean.js)
 - [翻转字符串](./src/reverse.js)
 - [逆转数字](./src/reverse_num.js)
@@ -46,8 +47,12 @@
 - [实现 toggle class](./src/toggle_class.js)
 - [将 XML 转换为 JSON](./src/xml2json.js)
 
+## 资讯
+
+- [即将到来的 ECMAScript 2022 新特性](https://juejin.cn/post/7062901984046612511)
 
 ## What's output  
+
 [![source](https://img.shields.io/badge/来源-source-brightgreen.svg)](https://github.com/lydiahallie/javascript-questions)
 
 - [变量提升 | var 和 let](./src/_var&let.js)

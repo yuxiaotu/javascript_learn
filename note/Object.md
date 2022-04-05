@@ -246,3 +246,25 @@ Object
 - Object.property.toString()
 - Object.property.localeString()
 - Object.property.valueOf()
+
+## 8.1. hasOwnProperty
+
+`hasOwnProperty()` 会严格判断属性是不是对象本身的属性，如果是继承而来的属性会返回 `false`。
+
+- 参数：要检测的属性。
+
+- 返回值：布尔值，判断某个对象中是否含有指定的属性。
+
+```js
+const obj = {};
+obj.property1 = 42;
+console.log(obj.hasOwnProperty(property1));
+console.log(obj.hasOwnProperty(toString));
+```
+
+```
+输出结果：
+true
+false
+```
+

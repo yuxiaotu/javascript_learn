@@ -5,7 +5,7 @@
 - [let 和 const 关键字的特定](#3-let-和-const-关键字的特点)
 
 
-# 1. var let const 的作用
+# 1. var, let, const 的作用
 `var`，`let`，`const` 这三个关键字都可以用于声明变量。
 
 `Js` 是 [弱类型](https://zh.wikipedia.org/wiki/%E5%BC%B7%E5%BC%B1%E5%9E%8B%E5%88%A5) 的编程语言，在声明变量的时候不需要指定数据类型，只要用关键字声明它是一个变量就可以了。

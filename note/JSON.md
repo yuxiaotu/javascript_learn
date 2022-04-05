@@ -1,7 +1,8 @@
 # JSON
 
 # 1. 作用
-`JSON` 是 `JavaScript Object Notation` 的简写，是一种用于数据传输和存储的格式。主要是服务器向网页传递数据。
+- `JSON` 是 `JavaScript Object Notation` 的简写
+- 是一种用于数据传输和存储的格式，主要是服务器向网页传递数据。
 
 ```json
 {"sites":[
@@ -11,16 +12,39 @@
 ]}
 ```
 
-# 2. JSON.parse()
-`JSON.parse()` 用于将 `JSON` 格式的数据转化为 `JavaScript` 对象。
+#  2. 方法
+
+- JSON.stringify()
+- JSON.parse()
+
+## 2.1. stringify
+
+将一个 JavaScript 对象或值转换为 JSON 字符串。
 
 ```js
-var obj = JSON.parse(text);
+const json = {
+	"result": true,
+	"count": 42
+};
+console.log(JSON.stringify(json));
 ```
 
-# 3. JSON.stringify()
-`JSON.stringify()` 用于将 `JavaScript` 值转化为字符串。
+```
+输出结果：
+'{"result": true, "count": 42}'
+```
+
+## 2.2. parse()
+
+解析 JSON 字符串，构造由字符串描述的 JavaScript 值或对象。
 
 ```js
-var text = JSON.stringify(obj);
+const json = '{"result": true, "count": 42}';
+const obj = JSON.parse(json);
+console.log(obj.count);
+```
+
+```
+输出结果：
+42
 ```
