@@ -5,7 +5,7 @@
 - [let 和 const 关键字的特定](#3-let-和-const-关键字的特点)
 
 
-# 1. var, let, const 的作用
+## 1. var, let, const 的作用
 `var`，`let`，`const` 这三个关键字都可以用于声明变量。
 
 `Js` 是 [弱类型](https://zh.wikipedia.org/wiki/%E5%BC%B7%E5%BC%B1%E5%9E%8B%E5%88%A5) 的编程语言，在声明变量的时候不需要指定数据类型，只要用关键字声明它是一个变量就可以了。
@@ -16,7 +16,7 @@ let price = 8.8;
 const productionPlace = 'Yantai Sandong';
 ```
 
-# 2. var 关键字的特点
+## 2. var 关键字的特点
 使用 `var` 关键字声明的变量其作用域是它当前的执行上下文。如果一个变量没有用 `var` 声明，那么这个变量就变成了「全局变量」。
 
 ```js
@@ -42,7 +42,7 @@ x = 1;
 var x;
 ```
 
-# 3. let 和 const 关键字的特点
+## 3. let 和 const 关键字的特点
 `let` 和 `const` 这两个关键字是 `ES6` 中新增加的。
 
 `let` 用来声明一个「块级作用域」的变量，即只在变量所在的代码块中有效。例如，可以在循环或者是函数中声明变量。

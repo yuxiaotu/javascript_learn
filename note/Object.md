@@ -14,7 +14,7 @@
 - [实例方法](#8-实例方法)
 
 
-# 1. Object 的作用和创建方式
+## 1. Object 的作用和创建方式
 `Js` 中的对象用于存储 `key-value` 的集合和复杂的实体，`key` 总是 `string` 类型，而 `value` 可以是任何类型，`Object` 里的 `key-value` 是无序的。
 
 通过 `Object()` 构造函数，或者是 [对象字面量](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer) 的方式创建:
@@ -37,7 +37,7 @@ let fruit = new Object({
 在 `Js` 中，几乎所有的对象都是 `Object` 类型的实例，它们都会从 `Object.property` 继承属性和方法。
 
 
-# 2. 访问 Object 内容
+## 2. 访问 Object 内容
 对 `Object` 的访问通过属性名来完成：
 - 符号 ` . ` 连接属性名。
 - 符号 `[]`，连接指代属性名的变量。
@@ -55,7 +55,7 @@ Apple
 ```
 
 
-# 3. 判断属性是否存在
+## 3. 判断属性是否存在
 通过判断对应的属性名是否存在于对象中来判断属性是否存在。
 - key in Object 方法。
 - Object.hasOwnProperty() 方法。
@@ -77,7 +77,7 @@ true
 - `Object.hasOwnProperty()` 判断最严格，只有 `fruit` 本身拥有属性 `name` 才会返回 `true`。
 
 
-# 4. 删除 Object 中的属性
+## 4. 删除 Object 中的属性
 使用 `delete` 关键字可以删除属性。
 
 ```js
@@ -90,7 +90,7 @@ console.log(fruit);
 ```
 
 
-# 5. 遍历 Object 中的属性
+## 5. 遍历 Object 中的属性
 要遍历 `Object` 首先得到对象的所有属性名，然后通过属性名来访问。
 - for - in 方法，遍历对象的属性名。
 - Object.keys() 方法，返回对象的所有属性名。
@@ -113,7 +113,7 @@ proctionPlace : Yantai Shandong
 ```
 
 
-# 6. 静态方法
+## 6. 静态方法
 - Object.assign()
 - Object.defineProperty()
 - Object.defineProperties()
@@ -129,7 +129,7 @@ proctionPlace : Yantai Shandong
 - Object.isFrozen()
 
 
-## 6.1. assign()
+### 6.1. assign()
 将所有可枚举属性的值从一个或多个源对象分配到目标对象。
 - 参数：目标对象，源对象。
 - 返回值：目标对象。
@@ -151,7 +151,7 @@ console.log(returnTarget);
 }
 ```
 
-## 6.2. defineProperty()
+### 6.2. defineProperty()
 直接在一个对象上定义一个新属性，或者修改一个对象的现有属性。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
 - 参数：要定义属性的对象，新定义的属性名称，属性描述。
 - 返回值：定义属性后的新对象。
@@ -201,7 +201,7 @@ amazing
 good
 ```
 
-## 6.3. freeze()
+### 6.3. freeze()
 冻结一个对象，冻结后不能再添加新的属性，也不能再删除、修改属性。
 
 ```js
@@ -218,7 +218,7 @@ console.log(fruit)
 }
 ```
 
-## 6.4. getPropertyOf() 
+### 6.4. getPropertyOf() 
 返回指定对象的原型。
 
 ```js
@@ -235,19 +235,19 @@ Object
 ```
 
 
-# 7. 实例属性
+## 7. 实例属性
 - Object.property.constructor
 - `Object.property.__proto__`
 
 
-# 8. 实例方法
+## 8. 实例方法
 - Object.property.hasOwnProperty()
 - Object.property.isPropertyOf()
 - Object.property.toString()
 - Object.property.localeString()
 - Object.property.valueOf()
 
-## 8.1. hasOwnProperty
+### 8.1. hasOwnProperty
 
 `hasOwnProperty()` 会严格判断属性是不是对象本身的属性，如果是继承而来的属性会返回 `false`。
 
